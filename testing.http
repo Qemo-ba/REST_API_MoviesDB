@@ -1,0 +1,30 @@
+#all Movies
+GET http://[::1]:5001/api/movies
+###one Movie
+GET  http://[::1]:5001/api/movies/1
+### Create Movie
+POST http://[::1]:5001/api/movies
+Content-Type: application/json
+
+{
+  "id": "1",
+  "title": "Star Wars: Das Imperium schlägt zurück",
+  "year": 1980,
+  "summary": "Darth Vader is back",
+  "actors": ["Hamill", "Ford", "Fisher"]
+}
+
+### Update Movie
+PUT http://[::1]:5001/api/movies/1
+Content-Type: application/json
+
+{
+  "id": "1",
+  "title": "Star Wars: Das Imperium schlägt zurück",
+  "year": 1980,
+  "summary": "Darth Vader is back",
+  "actors": ["Hamill", "Ford", "Fisher", "alllfonsooo"]
+}
+
+### Delete Movie
+DELETE http://[::1]:5001/api/movies/1
